@@ -23,7 +23,7 @@ Running `npm start` will use the `stack` CLI tool to start the example service o
 You might also find it useful to install `stack` globally to your system.
 
 ```bash
-npm start stackvana -g
+npm install stackvana -g
 ```
 
 This will allow you to run the `stack` command for any local services you write.
