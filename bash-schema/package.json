@@ -1,0 +1,14 @@
+{
+  "name": "bash-schema",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.sh",
+  "view": "view.html",
+  "language": "bash",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "",
+  "license": "MIT"
+}

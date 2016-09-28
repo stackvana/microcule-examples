@@ -1,0 +1,14 @@
+{
+  "name": "bash-hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "language": "bash",
+  "source": "echo \"Hello, this is a Bash script.\";\necho \"\\$Hook_params_* is populated with request parameters\";\necho \"\\$Hook_params_foo:\" $Hook_params_foo;",
+  "main": "index.sh",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}

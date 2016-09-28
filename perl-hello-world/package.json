@@ -1,0 +1,13 @@
+{
+  "name": "perl-hello-world",
+  "version": "1.0.0",
+  "language": "perl",
+  "source": "print \"Hello, this is a Perl script.\\n\";\nprint \"\\$Hook_params_* is populated with request parameters\\n\";\nprint \"\\$Hook_params_foo: \" . $Hook_params_foo . \"\\n\";\n",
+  "main": "index.pl",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}

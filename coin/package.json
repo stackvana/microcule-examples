@@ -1,0 +1,15 @@
+{
+  "name": "coin",
+  "version": "1.0.0",
+  "description": "",
+  "language": "javascript",
+  "source": "module['exports'] = function getCoin (hook) {\n  var request = require('request');\n  var url = 'http://coinmarketcap-nexuist.rhcloud.com/api/' + hook.params.coin;\n  request(url, { json: true }, function (err, response, body) {\n    if (hook.params.currency !== 'all') {\n      // if a specific currency is selected, filter the results\n      return hook.res.end(body['price'][hook.params.currency]);\n    } else {\n      // else, send all coin data back\n      hook.res.end(JSON.stringify(body));\n    }\n  });\n};\n \nmodule['exports'].schema = {\n  \"coin\": {\n    \"type\": \"string\",\n    \"format\": \"select\",\n    \"default\": \"btc\",\n    \"enum\": [\"btc\", \"ltc\", \"doge\", \"ppc\"]\n  },\n  \"currency\": {\n    \"type\": \"string\",\n    \"format\": \"select\",\n    \"default\": \"all\",\n    \"enum\": [\"all\", \"usd\", \"eur\", \"cny\", \"cad\", \"rub\", \"btc\"]\n  }\n};",
+  "main": "index.js",
+  "schema": "schema.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}

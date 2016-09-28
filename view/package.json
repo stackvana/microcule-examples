@@ -1,0 +1,13 @@
+{
+  "name": "view",
+  "version": "1.0.0",
+  "language": "javascript",
+  "source": "module['exports'] = function view (hook) {\n  var view = require('view');\n  var marak = 'https://raw.githubusercontent.com/Marak/marak.com/master/view';\n  var url = hook.req.headers['x-forwarded-url'];\n  view.create( { remote: marak } , function (err, v) {\n    if (err) {\n      return hook.res.end(err.message);\n    }\n    v.remote(url, function (err, result) {\n      if (err) {\n        return hook.res.end(err.message);\n      }\n      return hook.res.end(result);\n    });\n  });\n};\n\nmodule['exports'].cache = 60000000;",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}

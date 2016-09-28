@@ -1,0 +1,14 @@
+{
+  "name": "javascript-fake-data",
+  "version": "1.0.0",
+  "description": "",
+  "language": "javascript",
+  "source": "// Simple microservice for generating fake data\n// faker.js docs - http://github.com/marak/faker.js \nmodule['exports'] = function fakeData (hook) {\n  var faker = require('faker');\n  // supports multiple locales\n  faker.locale = 'en'; // try: 'de', 'es'\n  // supports all faker.js methods\n  var result = faker.name.findName();\n  hook.res.end(result);\n};",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "geoip",
+  "version": "1.0.0",
+  "description": "",
+  "language": "javascript",
+  "main": "index.js",
+  "schema": "schema.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}

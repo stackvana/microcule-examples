@@ -1,0 +1,14 @@
+{
+  "name": "javascript-datastore",
+  "version": "1.0.0",
+  "description": "",
+  "language": "javascript",
+  "source": "module['exports'] = function datastoreExample (hook) {\n  var res = hook.res, \n      req = hook.req,\n      store = hook.datastore;\n  store.set('mykey', { foo: \"bar\" }, function(err, result){\n    if (err) { return hook.res.end(err.message); }\n    store.get('mykey', function(err, result){\n      if (err) { return hook.res.end(err.message); }\n      res.end(JSON.stringify(result, true, 2));\n    });\n  });\n};",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "microservice-examples",
+  "version": "2.0.0",
+  "description": "Open-source collection of example HTTP Microservices in many programming languages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "stackvana": "^1.2.0"
+  }
+}

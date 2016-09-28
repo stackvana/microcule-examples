@@ -1,0 +1,14 @@
+{
+  "name": "javascript-files-stat",
+  "version": "1.0.0",
+  "description": "",
+  "language": "javascript",
+  "source": "module['exports'] = function statFile (hook) {\n  hook.fs.stat('testing-file.txt', function (err, stat) {\n    if (err){ \n      return hook.res.end(err.message);\n    }\n    hook.res.json(stat);\n  });\n};",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}

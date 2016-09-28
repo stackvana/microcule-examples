@@ -1,0 +1,16 @@
+{
+  "name": "javascript-image-resize",
+  "version": "1.0.0",
+  "language": "javascript",
+  "source": "module['exports'] = function imageResize (hook, callback) {\n  // GraphicsMagick fully supported\n  var gm = require('gm');\n  // for a more complete example that supports file uploads and streaming uploads\n  // see: http://image.resize.hook.io\n  // grab an image as a url\n  // no file has been uploaded, fallback to the image \"url\" parameter\n  var stream = hook.open('https://hook.io/img/robotcat.png');\n  hook.res.writeHead(200, { 'Content-Type': 'image/png' });\n  gm(stream)\n  .options({imageMagick: true })\n  .resize(150, 150)\n  .stream()\n  .pipe(hook.res);\n};",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT",
+  "dependencies": {
+    "gm": "^1.23.0"
+  }
+}

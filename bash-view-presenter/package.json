@@ -1,0 +1,15 @@
+{
+  "name": "bash-view-presenter",
+  "version": "1.0.0",
+  "language": "bash",
+  "description": "",
+  "main": "index.sh",
+  "view": "view.html",
+  "presenter": "presenter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "",
+  "license": "MIT"
+}

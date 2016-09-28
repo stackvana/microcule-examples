@@ -1,0 +1,14 @@
+{
+  "name": "markdown",
+  "version": "1.0.0",
+  "description": "",
+  "language": "javascript",
+  "source": "module['exports'] = function markdownHook (hook) {\n  var marked = require('marked');\n  // TODO: expose parser options through schema\n  marked.setOptions({\n    renderer: new marked.Renderer(),\n    gfm: true,\n    tables: true,\n    breaks: false,\n    pedantic: false,\n    sanitize: true,\n    smartLists: true,\n    smartypants: false\n  });\n  \n  // If the hook is not currently streaming, req has already been fully buffered\n  if (!hook.streaming) {\n    hook.debug('Request is now fully buffered.')\n    //\n    // To test a streaming Hook you can use Curl:\n    //\n    //  echo \"foo\" | curl --header \"content-type: application/octet-stream\"  --data-binary @- http://markdown.hook.io/\n    //\n    if (typeof hook.params.text === \"undefined\" || hook.params.text.length === 0) {\n      return hook.res.end(\"'text' parameter is required!\");\n    }\n    \n    \n    hook.debug('Attempting to parse markdown...');\n    var html = marked(hook.params.text);\n    hook.debug('Parsing complete. Sending HTML.');\n    return hook.res.end(html);\n  }\n\n  hook.req.on('end', function(){\n    hook.res.end('');\n  });\n  hook.req.on('data', function(chunk){\n    hook.res.write(marked(chunk.toString()))\n  });\n  \n}\n\nmodule['exports'].schema = {\n  \"text\": {\n    \"type\": \"string\",\n    \"format\": \"text\",\n    \"default\": \"#hello\"\n    //todo: #68 Add client-side validation for forms\n    // \"required\": true\n  }\n};",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}

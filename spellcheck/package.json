@@ -1,0 +1,13 @@
+{
+  "name": "spellcheck",
+  "version": "1.0.0",
+  "language": "javascript",
+  "source": "module['exports'] = function echoHttp (hook) {\n\n  var path = require('path');\n  var SpellCheck = require('spellcheck'),\n        base = __dirname + \"../../../../modules/builds/hunspell/en_US/\";\n        base = path.resolve(base);\n        base = base + \"/\";\n        spell = new SpellCheck(base + 'en_US.aff', base + 'en_US.dic');\n    \n  // If the hook is not currently streaming, req has already been fully buffered\n  if (!hook.streaming) {\n    //\n    // To test a streaming Hook you can use Curl:\n    //\n    //  echo \"foo\" | curl --header \"content-type: application/octet-stream\"  --data-binary @- http://hook.io/Marak/transform\n    //\n    \n    var word = hook.params.word;\n    \n    if (typeof word === \"undefined\" || word.length === 0) {\n      return hook.res.end(\"'word' parameter is required!\");\n    }\n    \n    return spell.check(word, function(err, correct, suggestions) {\n        if (err) {\n          return hook.res.end(err.message);\n        }\n        var result;\n        console.log('is correct', correct)\n        \n        if (correct) {\n          result =  '\"' + word + '\"' + \" is spelled correctly!\";\n        } else {\n          result = '\"' + word + '\"' + ' not recognized. Suggestions: ' + suggestions;\n        }\n        hook.res.end(result);\n    });\n  }\n\n  var ended = false;\n  hook.req.on('end', function(){\n    ended = true;\n  });\n  hook.req.on('data', function(chunk){\n    var word = chunk.toString();\n    spell.check(word, function(err, correct, suggestions) {\n        if (err) {\n          return hook.res.end(err.message);\n        }\n        var result;\n        console.log('is correct', correct)\n        if (correct) {\n          result =  '\"' + word + '\"' + \" is spelled correctly!\";\n        } else {\n          result = '\"' + word + '\"' + ' not recognized. Suggestions: ' + suggestions;\n        }\n        hook.res.write(result);\n        if (ended) {\n          hook.res.end();\n        }\n    });\n  });\n};\n\nmodule['exports'].schema = {\n  \"word\": {\n    \"type\": \"string\"\n    //todo: #68 Add client-side validation for forms\n    // \"required\": true\n  }\n};",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}

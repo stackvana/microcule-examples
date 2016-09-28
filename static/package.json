@@ -1,0 +1,14 @@
+{
+  "name": "static",
+  "version": "1.0.0",
+  "description": "",
+  "language": "javascript",
+  "source": "module['exports'] = function view (hook) {\n  \n  var url = hook.req.headers['x-forwarded-url'] || hook.params.page || hook.req.url;\n  var prefix = \"/\" + hook.resource.owner + \"/\" + hook.resource.name;\n  var relativeUrl = url.replace(prefix + \"/\", '');\n  relativeUrl = relativeUrl.replace(prefix, '');\n\n  if (relativeUrl === \"\" || relativeUrl === \"/\") {\n    relativeUrl = \"index.html\";\n  }\n  // TODO: better path detection for extended subfolders with trailing index.html....\n  if (relativeUrl.substr(0, 1) === \"/\"){\n    relativeUrl = relativeUrl.substr(1, relativeUrl.length - 1);\n  }\n  console.log(hook.resource.owner, hook.resource.name);\n  console.log('using url', relativeUrl);\n  //return hook.res.end(relativeUrl);\n  // TODO: add streaming to SDK... hook.fs.createReadStream('index.html').pipe(hook.res);\n  var readStream = hook.fs.createReadStream(relativeUrl);\n  readStream.on('error', function (err){\n    return hook.res.json(err);\n  });\n  \n  readStream.pipe(hook.res);\n  \n}",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}

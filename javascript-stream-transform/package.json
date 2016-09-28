@@ -1,0 +1,14 @@
+{
+  "name": "javascript-stream-transform",
+  "version": "1.0.0",
+  "description": "transform streaming requests",
+  "language": "javascript",
+  "source": "module['exports'] = function transformStream (hook) {\n  // If the hook is not currently streaming, \n  // the req has already been fully buffered,\n  // and can no longer be streamed!\n  if (!hook.streaming) {\n    return hook.res.end('No streaming request detected. \\n\\nTo test streaming data to this Hook try running this Curl command: \\n\\n     echo \"foo\" | curl --header \"content-type: application/octet-stream\"  --data-binary @- https://hook.io/Marak/transformStream');\n  }\n  hook.req.on('end', function(){\n    hook.res.end();\n  });\n  hook.req.on('data', function(chunk){\n    hook.res.write('transformed-' + chunk.toString())\n  });\n};",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}

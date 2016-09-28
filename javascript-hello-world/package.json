@@ -1,0 +1,14 @@
+{
+  "name": "javascript-hello-world",
+  "version": "1.0.0",
+  "description": "hello world",
+  "language": "javascript",
+  "source": "// A simple hello world microservice \n// Click \"Deploy Service\" to deploy this code\n// Service will respond to HTTP requests with a string\nmodule['exports'] = function helloWorld (hook) {\n  // hook.req is a Node.js http.IncomingMessage\n  var host = hook.req.host;\n  // hook.res is a Node.js httpServer.ServerResponse\n  // Respond to the request with a simple string\n  hook.res.end(host + ' says, \"Hello world!\"');\n};",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}

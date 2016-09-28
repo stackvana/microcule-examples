@@ -1,0 +1,14 @@
+{
+  "name": "javascript-pipe-hook",
+  "version": "1.0.0",
+  "description": "pipe streaming requests",
+  "language": "javascript",
+  "source": "// Connect two Hooks together using .pipe()\nmodule['exports'] = function pipeHook (hook) {\n  // hook.open will create a stream to the echo hook\n  // hook.open is for convience. Any stream will work.\n  var stream = hook.open('https://hook.io/Marak/helloWorld');\n  // Once we have created a stream to helloWorld,\n  // pipe that stream to the client.\n  // This techinque can be used on any streaming interace\n  stream.pipe(hook.res);\n};",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "javascript-files-readfile",
+  "version": "1.0.0",
+  "description": "",
+  "language": "javascript",
+  "source": "module['exports'] = function readFile (hook) {\n  hook.fs.readFile('testing-file.txt', function (err, file) {\n    if (err){ \n      return hook.res.end(err.message);\n    }\n    hook.res.json(file);\n  });\n};",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "javascript-input-schema",
+  "version": "1.0.0",
+  "description": "add input schema validators",
+  "language": "javascript",
+  "source": "module['exports'] = function inputSchema (hook, callback) {\n  // Responds back with incoming Hook parameters\n  hook.res.end(JSON.stringify(hook.params, true, 2));\n};\n// Specify an optional schema object\n// This enables validation and defaults for Hook input\n// For complete documentation on available schema types,\n// see: http://github.com/mschema/mschema\nmodule['exports'].schema = {\n  \"name\": {\n    \"type\": \"string\",\n    \"default\": \"Bob\",\n    \"required\": false\n  },\n  \"age\": {\n    \"type\": \"number\",\n    \"default\": 40\n  },\n  \"status\": {\n    \"type\": \"string\",\n    \"default\": \"active\",\n    \"enum\": [\"active\", \"disabled\"]\n  },\n  \"isAlive\": {\n    \"type\": \"boolean\",\n    \"default\": true\n  }\n};\n",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}

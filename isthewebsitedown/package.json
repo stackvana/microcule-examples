@@ -1,0 +1,13 @@
+{
+  "name": "isthewebsitedown",
+  "version": "1.0.0",
+  "language": "javascript",
+  "source": "var http = require('http');\n\nmodule['exports'] = function isTheWebSiteDown (hook) {\n  http.get(hook.params.url, function(res){\n    hook.debug(hook.params.url + \" is up and running.\")\n    hook.res.end('false');\n  }).on('error', function (){\n    hook.debug(hook.params.url + \" is DOWN!\")\n    hook.res.end('true');\n  });\n};\n\nmodule['exports'].schema = {\n  \"url\": {\n    \"type\": \"string\",\n    \"default\": \"http://google.com\"\n  }\n};",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}

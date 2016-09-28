@@ -1,0 +1,14 @@
+{
+  "name": "javascript-files-removefile",
+  "version": "1.0.0",
+  "description": "",
+  "language": "javascript",
+  "source": "module['exports'] = function removeFile (hook) {\n  hook.fs.removeFile('testing-file.txt', function (err, status) {\n    if (err){ \n      return hook.res.end(err.message);\n    }\n    hook.res.json(status);\n  });\n};",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}

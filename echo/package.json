@@ -1,0 +1,14 @@
+{
+  "name": "echo",
+  "version": "1.0.0",
+  "description": "",
+  "language": "javascript",
+  "source": "module['exports'] = function echoHttp (hook) {\n\n  console.log(\"Console messages are sent to /logs\");\n\n  console.log(hook.params);\n\n  console.log(hook.req.path);\n\n  console.log(hook.req.method);\n  \n  console.log(hook.env);\n\n  hook.res.end(JSON.stringify(hook.params, true, 2));\n\n};\n\n// Remark: Using a schema is *completely* optional! \n// You *can* pass abritrary parameters without using a schema\n// For Example: curl http://echo.hook.io?foo=bar\nmodule['exports'].schema = {\n  \"param1\": {\n    \"type\": \"string\",\n    \"default\": \"foo\"\n  },\n  \"param2\": {\n    \"type\": \"string\",\n    \"default\": \"bar\"\n  }\n};",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}

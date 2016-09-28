@@ -1,0 +1,14 @@
+{
+  "name": "babel-hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "language": "babel",
+  "source": "// A simple hello world microservice \n// Click \"Deploy Service\" to deploy this code\n// Service will respond to HTTP requests with a string\nimport sleep from 'then-sleep';\nexport default async function (hook) {\n  await sleep(500);\n  hook.res.end(\"Hello world!\");\n}",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}
