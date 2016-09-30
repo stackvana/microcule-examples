@@ -16,5 +16,9 @@ dir = dir.filter(function(item){
 });
 
 dir.forEach(function (item) {
-  hooks.services[item] = requireServiceSync({ path: __dirname + '/' + item });
+  try {
+    hooks.services[item] = requireServiceSync({ path: __dirname + '/' + item });
+  } catch (err) {
+    console.log("was unable to require service: ", item) ;
+  }
 });
