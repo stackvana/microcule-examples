@@ -3,12 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "language": "babel",
-  "source": "// A simple hello world microservice \n// Click \"Deploy Service\" to deploy this code\n// Service will respond to HTTP requests with a string\nimport sleep from 'then-sleep';\nexport default async function (hook) {\n  await sleep(500);\n  hook.res.end(\"Hello world!\");\n}",
   "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "stack ."
+    "start": "./node_modules/stackvana/bin/stack .",
+    "test": "echo \"no tests available\""
   },
-  "author": "examples",
-  "license": "MIT"
+  "author": "marak",
+  "dependencies": {
+    "babel-core": "^6.16.0",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-regenerator": "^6.16.1",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-stage-3": "^6.16.0"
+  }
 }
