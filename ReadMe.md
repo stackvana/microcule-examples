@@ -1,6 +1,6 @@
 # microservice-examples
 
-Open-source collection of example HTTP Microservices in 13+ programming languages
+Open-source collection of example HTTP Microservices in multiple programming languages
 
 ## Running examples locally
 
@@ -11,6 +11,7 @@ For example:
 ```bash
 git clone https://github.com/stackvana/microservice-examples
 cd coin
+npm install
 npm start
 ```
 
