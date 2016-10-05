@@ -1,0 +1,14 @@
+{
+  "name": "php-hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "language": "php",
+  "source": "echo \"Hello, this is a PHP script.\\n\";\necho \"\\$Hook['params'] is populated with request parameters\\n\";\nvar_dump($Hook[\"params\"]);",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
+  },
+  "author": "examples",
+  "license": "MIT"
+}

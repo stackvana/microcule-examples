@@ -1,0 +1,12 @@
+{
+  "name": "bash",
+  "version": "1.0.0",
+  "description": "",
+  "language": "bash",
+  "main": "index.sh",
+  "license": "MIT",
+  "scripts": {
+    "start": "stack .",
+    "test": "echo \"no tests available\""
+  }
+}
