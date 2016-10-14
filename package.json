@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "stack ."
+    "start": "microcule ."
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "stackvana": "3.x.x"
+    "microcule": "4.x.x"
   }
 }

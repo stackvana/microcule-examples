@@ -7,7 +7,7 @@
   "main": "index.st",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "stack ."
+    "start": "microcule ."
   },
   "author": "examples",
   "license": "MIT"

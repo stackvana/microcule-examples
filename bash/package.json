@@ -6,7 +6,7 @@
   "main": "index.sh",
   "license": "MIT",
   "scripts": {
-    "start": "stack .",
+    "start": "microcule .",
     "test": "echo \"no tests available\""
   }
 }
