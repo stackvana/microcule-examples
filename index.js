@@ -1,6 +1,6 @@
 var hooks = {};
-var requireService = require('stackvana').requireService;
-var requireServiceSync = require('stackvana').requireServiceSync;
+var requireService = require('microcule').requireService;
+var requireServiceSync = require('microcule').requireServiceSync;
 
 module['exports'] = hooks;
 hooks.services = {};

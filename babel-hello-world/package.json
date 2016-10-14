@@ -6,7 +6,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "./node_modules/stackvana/bin/stack .",
+    "start": "./node_modules/microcule/bin/microcule .",
     "test": "echo \"no tests available\""
   },
   "author": "marak",
