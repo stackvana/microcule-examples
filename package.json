@@ -1,6 +1,6 @@
 {
   "name": "microservice-examples",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "description": "Open-source collection of example HTTP Microservices in many programming languages",
   "main": "index.js",
   "scripts": {
