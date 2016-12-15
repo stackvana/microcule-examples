@@ -1,5 +1,5 @@
 {
-  "name": "lua-hello-world",
+  "name": "lua",
   "version": "1.0.0",
   "language": "lua",
   "source": "print (\"Hello, this is a Lua script.\")\nprint (\"Hook_params_* is populated with request parameters\")\nprint (\"Hook_params_foo: \" .. Hook_params_foo)",

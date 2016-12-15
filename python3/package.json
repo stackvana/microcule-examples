@@ -1,5 +1,5 @@
 {
-  "name": "python3-hello-world",
+  "name": "python3",
   "version": "1.0.0",
   "language": "python3",
   "source": "print(\"Hello, this is a Python script.\")\nprint(\"Hook['params'] is populated with request parameters\")\nprint(Hook['params'])\nprint(\"Hook['req'] is the http request\")\nprint(Hook['req']['url'])",

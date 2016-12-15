@@ -1,5 +1,5 @@
 {
-  "name": "ruby-hello-world",
+  "name": "ruby",
   "version": "1.0.0",
   "language": "ruby",
   "source": "puts 'Hello, this is a Ruby script.'\nputs \"Hook['params'] is populated with request parameters\"\nputs Hook['params']",

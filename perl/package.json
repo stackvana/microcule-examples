@@ -1,5 +1,5 @@
 {
-  "name": "perl-hello-world",
+  "name": "perl",
   "version": "1.0.0",
   "language": "perl",
   "source": "print \"Hello, this is a Perl script.\\n\";\nprint \"\\$Hook_params_* is populated with request parameters\\n\";\nprint \"\\$Hook_params_foo: \" . $Hook_params_foo . \"\\n\";\n",

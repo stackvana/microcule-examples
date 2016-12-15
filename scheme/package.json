@@ -1,5 +1,5 @@
 {
-  "name": "scheme-hello-world",
+  "name": "scheme",
   "version": "1.0.0",
   "language": "scheme",
   "source": "(begin \n  (display \"Hello, this is a Scheme script.\")\n  (newline)\n  (display \"Hook_params_* is populated with request parameters\")\n  (newline)\n  (display \"Hook_params_foo: \") (display Hook_params_foo)\n)",

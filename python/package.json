@@ -1,5 +1,5 @@
 {
-  "name": "python-hello-world",
+  "name": "python",
   "version": "1.0.0",
   "language": "python",
   "source": "import pprint\nprint \"Hello, this is a Python script.\"\nprint \"Hook['params'] is populated with request parameters\"\npprint.pprint(Hook['params'])",

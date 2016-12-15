@@ -1,1 +1,1 @@
-echo "This is a Bash script output.";
+echo $Hook_params_foo;
