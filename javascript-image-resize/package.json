@@ -11,6 +11,7 @@
   "author": "examples",
   "license": "MIT",
   "dependencies": {
-    "gm": "^1.23.0"
+    "gm": "^1.23.0",
+    "microcule": "*"
   }
 }

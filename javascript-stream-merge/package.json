@@ -12,6 +12,7 @@
   "author": "examples",
   "license": "MIT",
   "dependencies": {
-    "merge-stream": "^1.0.0"
+    "merge-stream": "^1.0.0",
+    "microcule": "*"
   }
 }

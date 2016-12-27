@@ -9,6 +9,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "microcule ."
   },
+  "dependencies": {
+    "microcule": "*"
+  },
   "author": "examples",
   "license": "MIT"
 }
