@@ -1,6 +1,6 @@
 {
   "name": "lua",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "language": "lua",
   "main": "index.lua",
   "scripts": {

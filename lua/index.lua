@@ -1,5 +1,6 @@
 print ("Hello, this is a Lua script.")
-print ("Hook_params_* is populated with request parameters")
+print ("Hook['params'] is populated with request parameters")
 print ("Try setting the ?hello=world in the url for this service")
 print ("You can also try sending JSON or Form data to this service")
-print ("Hook_params_hello: " .. Hook_params_hello)
+json = require('json')
+print (json.stringify(Hook['params'], false))
