@@ -1,0 +1,16 @@
+{
+  "name": "ruby-write-to-logs",
+  "version": "1.0.0",
+  "language": "ruby",
+  "description": "write to logger from a Ruby script",
+  "main": "index.rb",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "microcule ."
+  },
+  "dependencies": {
+    "microcule": "*"
+  },
+  "author": "examples",
+  "license": "MIT"
+}
