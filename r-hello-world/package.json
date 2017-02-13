@@ -1,0 +1,16 @@
+{
+  "name": "r-hello-world",
+  "version": "1.0.0",
+  "description": "r ( using RScript) hello world example",
+  "language": "r",
+  "main": "index.r",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "microcule ."
+  },
+  "dependencies": {
+    "microcule": "*"
+  },
+  "author": "examples",
+  "license": "MIT"
+}

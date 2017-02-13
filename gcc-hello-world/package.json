@@ -1,0 +1,16 @@
+{
+  "name": "gcc-hello-world",
+  "version": "1.0.0",
+  "description": "c ( using gcc) hello world example",
+  "language": "gcc",
+  "main": "index.c",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "microcule ."
+  },
+  "dependencies": {
+    "microcule": "*"
+  },
+  "author": "examples",
+  "license": "MIT"
+}

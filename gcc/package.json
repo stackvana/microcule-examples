@@ -1,0 +1,16 @@
+{
+  "name": "gcc",
+  "version": "1.0.0",
+  "description": "c ( using gcc) echo example",
+  "language": "gcc",
+  "main": "index.c",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "microcule ."
+  },
+  "dependencies": {
+    "microcule": "*"
+  },
+  "author": "examples",
+  "license": "MIT"
+}

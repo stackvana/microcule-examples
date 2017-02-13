@@ -1,0 +1,16 @@
+{
+  "name": "rust",
+  "version": "1.0.0",
+  "description": "rust ( using rustc ) echo example",
+  "language": "rust",
+  "main": "index.rs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "microcule ."
+  },
+  "dependencies": {
+    "microcule": "*"
+  },
+  "author": "examples",
+  "license": "MIT"
+}
