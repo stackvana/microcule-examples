@@ -1,0 +1,15 @@
+{
+  "name": "python-wsgi",
+  "version": "1.0.0",
+  "language": "python",
+  "main": "index.py",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "microcule ."
+  },
+  "dependencies": {
+    "microcule": "*"
+  },
+  "author": "examples",
+  "license": "MIT"
+}

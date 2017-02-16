@@ -1,0 +1,15 @@
+{
+  "name": "bash-curl-request",
+  "version": "1.0.0",
+  "description": "",
+  "language": "bash",
+  "main": "index.sh",
+  "license": "MIT",
+  "scripts": {
+    "start": "microcule .",
+    "test": "echo \"no tests available\""
+  },
+  "dependencies": {
+    "microcule": "*"
+  }
+}

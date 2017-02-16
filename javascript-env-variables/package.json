@@ -1,0 +1,17 @@
+{
+  "name": "javascript-env-variables",
+  "version": "1.0.0",
+  "description": "access env variables in JavaScript",
+  "language": "javascript",
+  "main": "index.js",
+  "view": "index.html",
+  "license": "MIT",
+  "scripts": {
+    "start": "microcule .",
+    "test": "echo \"no tests available\""
+  },
+  "author": "examples",
+  "dependencies": {
+    "microcule": "*"
+  }
+}

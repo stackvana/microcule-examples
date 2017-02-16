@@ -1,3 +1,3 @@
 # the R app
-myString <- "Hello, World!"
+myString <- "hello world"
 print ( myString)

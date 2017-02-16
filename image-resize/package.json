@@ -1,0 +1,17 @@
+{
+  "name": "image-resize",
+  "version": "1.0.0",
+  "description": "",
+  "language": "javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "microcule ."
+  },
+  "dependencies": {
+    "gm": "*",
+    "microcule": "*"
+  },
+  "author": "examples",
+  "license": "MIT"
+}
