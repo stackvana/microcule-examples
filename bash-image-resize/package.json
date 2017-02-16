@@ -1,0 +1,17 @@
+{
+  "name": "bash-image-resize",
+  "version": "1.0.0",
+  "description": "resizes images in bash using `convert`, `curl`, and `less`",
+  "language": "bash",
+  "main": "index.sh",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "microcule ."
+  },
+  "dependencies": {
+    "gm": "*",
+    "microcule": "*"
+  },
+  "author": "examples",
+  "license": "MIT"
+}
