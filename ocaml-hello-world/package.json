@@ -1,0 +1,15 @@
+{
+  "name": "ocaml-hello-world",
+  "version": "1.0.0",
+  "description": "ocaml hello world service",
+  "language": "ocaml",
+  "main": "index.ml",
+  "license": "MIT",
+  "scripts": {
+    "start": "microcule .",
+    "test": "echo \"no tests available\""
+  },
+  "dependencies": {
+    "microcule": "*"
+  }
+}
