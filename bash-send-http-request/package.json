@@ -1,5 +1,5 @@
 {
-  "name": "bash-curl-request",
+  "name": "bash-send-http-request",
   "version": "1.0.0",
   "description": "",
   "language": "bash",

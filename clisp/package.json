@@ -1,8 +1,10 @@
 {
-  "name": "python3-hello-world",
+  "name": "clisp",
   "version": "1.0.0",
-  "language": "python3",
-  "main": "index.py",
+  "description": "",
+  "language": "clisp",
+  "main": "index.lisp",
+  "schema": "schema.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "microcule ."

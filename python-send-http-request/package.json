@@ -1,7 +1,8 @@
 {
-  "name": "python3-hello-world",
+  "name": "python-send-http-request",
   "version": "1.0.0",
-  "language": "python3",
+  "description": "send http requests using python and requests package",
+  "language": "python",
   "main": "index.py",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

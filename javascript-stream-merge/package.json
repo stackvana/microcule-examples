@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "merge streams",
   "language": "javascript",
-  "source": "module['exports'] = function mergeStreams (hook) {\n  var ms = require('merge-stream');\n  var stream1 = hook.open('https://hook.io/Marak/helloWorld');\n  var stream2 = hook.open('https://hook.io/Marak/helloWorld');\n  var merged = ms(stream1, stream2);\n  // You can also add new streams later\n  // merged.add(stream3);\n  merged.on('data', function(chunk){\n    hook.res.write(chunk.toString());\n  });\n  merged.on('end', function(){\n   hook.res.end();\n  });\n};",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +11,8 @@
   "author": "examples",
   "license": "MIT",
   "dependencies": {
-    "merge-stream": "^1.0.0",
-    "microcule": "*"
+    "merge-stream": "^1.0.1",
+    "microcule": "*",
+    "request": "^2.82.0"
   }
 }
