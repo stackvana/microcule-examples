@@ -1,6 +1,6 @@
 {
   "name": "microcule-examples",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "Open-source collection of example HTTP Microservices in many programming languages",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,6 @@
   "author": "Marak",
   "license": "MIT",
   "dependencies": {
-    "microcule": "5.x.x"
+    "microcule": "6.x.x"
   }
 }
